@@ -1,0 +1,56 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@600&display=swap');
+
+.menu {
+    width: 25vh;
+    height: 90vh;
+    border-radius: 30px;
+    background: #7F7FD5;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #91EAE4, #86A8E7, #7F7FD5);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #91EAE4, #86A8E7, #7F7FD5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    float: left;
+}
+
+.search {
+    width: 40vh;
+    height: 5vh;
+    border-radius: 80px;
+    position: relative;
+    top: 5px;
+    left: 360px;
+}
+
+.menu2 {
+    width: 145vh;
+    height: 30vh;
+    border-radius: 30px;
+    background: #7F7FD5;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #91EAE4, #86A8E7, #7F7FD5);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #91EAE4, #86A8E7, #7F7FD5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    position: relative;
+    top: 10px;
+    left: 360px;
+}
+
+.title{
+    font-family: 'Black Han Sans', sans-serif;
+    color: whitesmoke;
+}
+
+.icon{
+    color: whitesmoke;
+}
+
+.menulist {
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.596);
+}
+
+a:hover {
+    color: whitesmoke;
+}
