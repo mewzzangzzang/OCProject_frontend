@@ -17,7 +17,7 @@
  }
 
  .regionchart {
-   float: left;
+  float: left;
  }
 
  .sizechart {
@@ -30,3 +30,8 @@
  .chart{
   margin: 0 auto;
  }
+
+ 
+.mapChart {
+  float: left;
+}

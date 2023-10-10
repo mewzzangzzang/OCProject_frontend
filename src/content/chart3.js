@@ -17,90 +17,90 @@ import {
 const regiondata = [
   {
     name: "2017",
-    경남: 9955,
-    전남: 10177,
-    기타: 2325,
+    제주도: 24145,
+    완도: 12888,
+    기타: 3333,
+    amt: 4000,
   },
   {
     name: "2018",
-    경남: 12959,
-    전남: 8421,
-    기타: 3013,
+    제주도: 22626,
+    완도: 9792,
+    기타: 3280,
+    amt: 4000,
   },
   {
     name: "2019",
-    경남: 9874,
-    전남: 6252,
-    기타: 2896,
+    제주도: 22891,
+    완도: 10155,
+    기타: 2733,
+    amt: 4000,
   },
   {
     name: "2020",
-    경남: 8389,
-    전남: 6137,
-    기타: 2602,
+    제주도: 23471,
+    완도: 11041,
+    기타: 2392,
+    amt: 4000,
   },
   {
     name: "2021",
-    경남: 4534,
-    전남: 4165,
-    기타: 4259,
+    제주도: 22963,
+    완도: 10877,
+    기타: 2191,
+    amt: 4000,
   },
   {
     name: "2022",
-    경남: 5469,
-    전남: 3754,
-    기타: 2898,
+    제주도: 24211,
+    완도: 10474,
+    기타: 2237,
+    amt: 4000,
   },
 ];
 
 const sizedata = [
   {
     name: "2017",
-    "400g 미만": 3153,
-    "400g~500g": 7723,
-    "500~600g": 8417,
-    "600g 이상": 3164,
-    amt: 4000,
+    "500g 미만": 2623,
+    "500g~750g": 4987,
+    "750~1kg": 7675,
+    "1kg 이상": 25081,
   },
   {
     name: "2018",
-    "400g 미만": 3284,
-    "400g~500g": 11117,
-    "500~600g": 6623,
-    "600g 이상": 3369,
-    amt: 4000,
+    "500g 미만": 2131,
+    "500g~750g": 6225,
+    "750~1kg": 5986,
+    "1kg 이상": 21360,
   },
   {
     name: "2019",
-    "400g 미만": 2383,
-    "400g~500g": 6988,
-    "500~600g": 8291,
-    "600g 이상": 1360,
-    amt: 4000,
+    "500g 미만": 2171,
+    "500g~750g": 6025,
+    "750~1kg": 6076,
+    "1kg 이상": 21507,
   },
   {
     name: "2020",
-    "400g 미만": 3290,
-    "400g~500g": 6748,
-    "500~600g": 5051,
-    "600g 이상": 2039,
-    amt: 4000,
+    "500g 미만": 2088,
+    "500g~750g": 6582,
+    "750~1kg": 5898,
+    "1kg 이상": 22336,
   },
   {
     name: "2021",
-    "400g 미만": 2287,
-    "400g~500g": 4981,
-    "500~600g": 4169,
-    "600g 이상": 1521,
-    amt: 4000,
+    "500g 미만": 2010,
+    "500g~750g": 7129,
+    "750~1kg": 5061,
+    "1kg 이상": 21831,
   },
   {
     name: "2022",
-    "400g 미만": 2104,
-    "400g~500g": 4085,
-    "500~600g": 4583,
-    "600g 이상": 1346,
-    amt: 4000,
+    "500g 미만": 1591,
+    "500g~750g": 5773,
+    "750~1kg": 4464,
+    "1kg 이상": 25094,
   },
 ];
 
@@ -110,15 +110,23 @@ export class chart3 extends PureComponent {
       <div className="all" mt-4>
         <div className="mapChart">
           <iframe
-            src="https://public.tableau.com/views/2022_16969071533950/1?:language=ko-KR&:display_count=n&:origin=viz_share_link?:showVizHome=no?:embed=true "
-            width="70%"
+            src="https://public.tableau.com/views/20172022_16969283361580/1?:language=ko-KR&:display_count=n&:origin=viz_share_link?:showVizHome=no?:embed=true"
+            width="600"
+            height="600"
+            title="광어"
+          />
+        </div>
+        <div className="mapChart2">
+          <iframe
+            src="https://public.tableau.com/views/20172023_16969273905470/1?:language=ko-KR&:display_count=n&:origin=viz_share_link?:showVizHome=no?:embed=true"
+            width="600"
             height="600"
             title="광어"
           />
         </div>
         <div className="chart m-5">
           <div className="regionchart">
-            <div className="title">지역별 우럭 출하량</div>
+            <div className="title">지역별 광어 출하량</div>
             <LineChart
               width={700}
               height={200}
@@ -134,22 +142,22 @@ export class chart3 extends PureComponent {
               <CartesianGrid strokeDasharray="3 3" />
               <XAxis dataKey="name" padding={{ left: 50, right: 50 }} />
               <YAxis
-                domain={[0, 15000]}
-                ticks={[0, 5000, 10000, 15000]}
-                tickCount={4}
+                domain={[0, 30000]}
+                ticks={[0, 5000, 15000, 25000, 30000]}
+                tickCount={5}
               />
               <Tooltip />
               <Legend />
               <Line
                 type="monotone"
-                dataKey="경남"
+                dataKey="제주도"
                 stroke="#8884d8"
                 activeDot={{ r: 8 }}
                 strokeWidth={2}
               />
               <Line
                 type="monotone"
-                dataKey="전남"
+                dataKey="완도"
                 stroke="#82ca9d"
                 strokeWidth={2}
               />
@@ -163,7 +171,7 @@ export class chart3 extends PureComponent {
           </div>{" "}
           {/* regionchart */}
           <div className="sizebarchart">
-            <div className="title">크기별 우럭 출하량</div>
+            <div className="title">크기별 광어 출하량</div>
             <BarChart
               width={700}
               height={200}
@@ -178,16 +186,16 @@ export class chart3 extends PureComponent {
               <CartesianGrid strokeDasharray="3 3" />
               <XAxis dataKey="name" />
               <YAxis
-                domain={[0, 12000]}
-                ticks={[0, 6000, 12000]}
-                tickCount={3}
+                domain={[0, 30000]}
+                ticks={[0, 5000, 15000, 25000, 30000]}
+                tickCount={6}
               />
               <Tooltip />
               <Legend align="center" margin={{ left: 100 }} />
-              <Bar dataKey="400g 미만" fill="#8884d8" />
-              <Bar dataKey="400g~500g" fill="#8884d8" />
-              <Bar dataKey="500~600g" fill="#82ca9d" />
-              <Bar dataKey="600g 이상" fill="#82ca9d" />
+              <Bar dataKey="500g 미만" fill="#8884d8" />
+              <Bar dataKey="500g~750g" fill="#8884d8" />
+              <Bar dataKey="750~1kg" fill="#82ca9d" />
+              <Bar dataKey="1kg 이상" fill="#82ca9d" />
             </BarChart>
           </div>
         </div>

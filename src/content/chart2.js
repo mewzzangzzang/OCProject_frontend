@@ -6,11 +6,14 @@ import {
   Line,
   BarChart,
   Bar,
+  PieChart,
+  Pie,
   XAxis,
   YAxis,
   CartesianGrid,
   Tooltip,
   Legend,
+  ResponsiveContainer,
 } from "recharts";
 
 // 우럭 출하량 정보
@@ -105,14 +108,42 @@ const sizedata = [
   },
 ];
 
+const data02 = [
+  { name: "250g 미만", value: 4998 },
+  { name: "250~500g", value: 1861 },
+  { name: "500g~1kg", value: 1934 },
+  { name: "1kg 이상", value: 575 },
+];
+
 export default class chart2 extends PureComponent {
   render() {
     return (
       <div className="all mt-4">
+        <div className="mapChart">
+          <iframe
+            src="https://public.tableau.com/views/20172023_16969273905470/1?:language=ko-KR&:display_count=n&:origin=viz_share_link?:showVizHome=no?:embed=true"
+            width="600"
+            height="600"
+            title="광어"
+          />
+        </div>
+        <PieChart width={1000} height={400}>
+          <Pie
+            dataKey="value"
+            isAnimationActive={true}
+            data={data02}
+            cx={200}
+            cy={200}
+            outerRadius={80}
+            fill="#8884d8"
+            label
+          />
+          <Tooltip />
+        </PieChart>
         <div className="regionchart">
           <div className="title">지역별 우럭 출하량</div>
           <LineChart
-            width={500}
+            width={700}
             height={200}
             data={regiondata}
             margin={{
@@ -204,7 +235,7 @@ export default class chart2 extends PureComponent {
         <div className="sizebarchart">
           <div className="title">크기별 우럭 출하량</div>
           <BarChart
-            width={500}
+            width={700}
             height={200}
             data={sizedata}
             margin={{
