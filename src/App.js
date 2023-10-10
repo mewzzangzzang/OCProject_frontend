@@ -8,6 +8,7 @@ import "./App.css";
 import Chart from "./content/chart";
 import Main from "./content/main";
 import Chart2 from "./content/chart2";
+import Chart3 from "./content/chart3";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path="/" element={<Main />} />
           <Route path="/chart" element={<Chart />} />
           <Route path="/chart2" element={<Chart2 />} />
+          <Route path="/chart3" element={<Chart3 />} />
         </Routes>
       </BrowserRouter>
     </div>
