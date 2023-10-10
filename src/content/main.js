@@ -33,7 +33,7 @@ const main = () => {
             <Link to={`/Chart`}>테스트 1번</Link>
           </h3>
           <h3 className="menulist pt-5">
-            <Link to={`/Chart`}>테스트 2번</Link>
+            <Link to={`/Chart2`}>테스트 2번</Link>
           </h3>
           <h3 className="menulist pt-5">
             <Link to={`/Chart`}>테스트 3번</Link>
