@@ -13,7 +13,7 @@ import {
   Legend,
 } from "recharts";
 
-// 우럭 출하량
+// 우럭 출하량 정보
 
 const regiondata = [
   {

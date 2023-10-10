@@ -63,17 +63,8 @@
     color: rgba(0, 0, 0, 0.377);
 }
 
-.title{
-    font-family: 'Black Han Sans', sans-serif;
-    color: whitesmoke;
-}
-
 .icon{
     color: whitesmoke;
-}
-
-.menulist {
-    font-family: 'Noto Sans KR', sans-serif;
 }
 
 a {

@@ -40,3 +40,12 @@
 .navbar{
   float: left;
 }
+
+.menulist {
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+.title{
+  font-family: 'Black Han Sans', sans-serif;
+  color: whitesmoke;
+}

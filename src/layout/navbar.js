@@ -20,12 +20,11 @@ function navbar() {
           </div>
           <h1 className="title p-3">TEST</h1>
         </a>
-
         <h3 className="menulist pt-5">
           <a href={`/Chart`}>테스트 1번</a>
         </h3>
         <h3 className="menulist pt-5">
-          <a href={`/Chart2`}>테스트 2번</a>
+          <a href={`/Page2`}>테스트 2번</a>
         </h3>
         <h3 className="menulist pt-5">
           <a href={`/Chart3`}>테스트 3번</a>
