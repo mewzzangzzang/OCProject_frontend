@@ -9,11 +9,13 @@ import Chart from "./content/chart";
 import Main from "./content/main";
 import Chart2 from "./content/chart2";
 import Chart3 from "./content/chart3";
+import Navbar from "./layout/navbar";
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
+        <Navbar className="navbar" />
         <Routes>
           <Route path="/" element={<Main />} />
           <Route path="/chart" element={<Chart />} />
