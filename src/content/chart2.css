@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@600&display=swap');
 
+.menu1Div {
+   float: left;
+}
+
 .title {
    font-family: 'Noto Sans KR', sans-serif;
    font-size: 24px;
