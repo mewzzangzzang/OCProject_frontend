@@ -10,8 +10,8 @@ const main = () => {
   return (
     <div className="all mt-4 ">
       <div className="menu2Div">
-        <div className="search p-4 mt-5 shadow"></div> {/*search*/}
-        <div className="menu2 p-4 mt-4">
+        {/* <div className="search p-4 mt-5 shadow"></div> search */}
+        <div className="menu2 p-4 mt-5">
           <div className="datachartlist"></div> {/*menu2*/}
           <div className="datachart m-4 shadow">
             <h1 className="data">1000000원</h1>
@@ -23,14 +23,14 @@ const main = () => {
         </div>
       </div>
 
-      <div className="chartFrame">
+      {/* <div className="chartFrame">
         <iframe
           src="https://public.tableau.com/views/_16958031177070/1?:language=ko-KR&:display_count=n&:origin=viz_share_link?:showVizHome=no&:embed=true"
           width="40%"
           height="500"
           title="홍합"
         />
-      </div>
+      </div> */}
     </div>
   );
 };
