@@ -14,6 +14,7 @@ import Page2 from "./content/page2";
 import Page3 from "./content/page3";
 import Page4 from "./content/page4";
 import Test from "./content/test";
+import GoogleTrendsWidget from "./content/GoogleTrendsWidget ";
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
           <Route path="/page3" element={<Page3 />} />
           <Route path="/page4" element={<Page4 />} />
           <Route path="/test" element={<Test />} />
+          <Route path="/Google" element={<GoogleTrendsWidget />} />
         </Routes>
       </BrowserRouter>
     </div>

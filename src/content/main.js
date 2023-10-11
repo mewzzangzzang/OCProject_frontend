@@ -20,6 +20,12 @@ const main = () => {
           <div className="datachart m-4 shadow"></div>
           <div className="datachart m-4 shadow"></div>
           <div className="datachart m-4 shadow"></div>
+          <div className="googlekeyword">
+            <script
+              type="text/javascript"
+              src="https://ssl.gstatic.com/trends_nrtr/3461_RC01/embed_loader.js"
+            ></script>
+          </div>
         </div>
       </div>
 

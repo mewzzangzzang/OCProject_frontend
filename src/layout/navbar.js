@@ -30,10 +30,10 @@ function navbar() {
           <a href={`/Page4`}>수출</a>
         </h3>
         <h3 className="menulist pt-5">
-          <a href={`/Chart`}>트랜드</a>
+          <a href={`/Google`}>트랜드</a>
         </h3>
         <h3 className="menulist pt-5">
-          <a href={`/Chart`}>아카이브</a>
+          <a href={`/test`}>아카이브</a>
         </h3>
       </div>
 
