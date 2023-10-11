@@ -27,7 +27,7 @@ function navbar() {
           <a href={`/Page3`}>수입</a>
         </h3>
         <h3 className="menulist pt-5">
-          <a href={`/Chart`}>수출</a>
+          <a href={`/Page4`}>수출</a>
         </h3>
         <h3 className="menulist pt-5">
           <a href={`/Chart`}>트랜드</a>
