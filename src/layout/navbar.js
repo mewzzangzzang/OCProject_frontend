@@ -21,16 +21,19 @@ function navbar() {
           <h1 className="title p-3">TEST</h1>
         </a>
         <h3 className="menulist pt-5">
-          <a href={`/Chart`}>테스트 1번</a>
-        </h3>
-        <h3 className="menulist pt-5">
           <a href={`/Page2`}>출하량</a>
         </h3>
         <h3 className="menulist pt-5">
-          <a href={`/Chart3`}>수출 / 수입</a>
+          <a href={`/Page3`}>수입</a>
         </h3>
         <h3 className="menulist pt-5">
-          <a href={`/Chart`}>테스트 4번</a>
+          <a href={`/Chart`}>수출</a>
+        </h3>
+        <h3 className="menulist pt-5">
+          <a href={`/Chart`}>트랜드</a>
+        </h3>
+        <h3 className="menulist pt-5">
+          <a href={`/Chart`}>아카이브</a>
         </h3>
       </div>
 

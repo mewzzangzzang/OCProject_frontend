@@ -15,7 +15,13 @@
    margin-left: 50px;
    color: black;
  }
-
+.mapChart{
+  float: left;
+}
+h2{
+  clear: both;
+  text-align: center;
+}
  .regionchart {
   float: left;
  }
@@ -27,6 +33,18 @@
    float: left;
  }
 
+ .chinachart{
+  float: left;
+ }
+
+ .philippinchart {
+  float: left;
+ }
+
+ .japanchart{
+  float: left;
+ }
+
  .chart{
   margin: 0 auto;
  }
@@ -34,4 +52,9 @@
  
 .mapChart {
   float: left;
+}
+
+.pieChart{
+  width: 100vh;
+  height: 100vh;
 }

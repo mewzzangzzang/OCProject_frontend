@@ -11,6 +11,7 @@ import Chart2 from "./content/chart2";
 import Chart3 from "./content/chart3";
 import Navbar from "./layout/navbar";
 import Page2 from "./content/page2";
+import Page3 from "./content/page3";
 import Test from "./content/test";
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
           <Route path="/chart2" element={<Chart2 />} />
           <Route path="/chart3" element={<Chart3 />} />
           <Route path="/page2" element={<Page2 />} />
+          <Route path="/page3" element={<Page3 />} />
           <Route path="/test" element={<Test />} />
         </Routes>
       </BrowserRouter>

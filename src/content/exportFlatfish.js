@@ -1,4 +1,4 @@
-// 광어 수출입
+// 광어 수출
 
 import React from "react";
 

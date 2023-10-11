@@ -110,16 +110,8 @@ export class chart3 extends PureComponent {
       <div className="all" mt-4>
         <div className="mapChart">
           <iframe
-            src="https://public.tableau.com/views/20172022_16969283361580/1?:language=ko-KR&:display_count=n&:origin=viz_share_link?:showVizHome=no?:embed=true"
-            width="600"
-            height="600"
-            title="광어"
-          />
-        </div>
-        <div className="mapChart2">
-          <iframe
-            src="https://public.tableau.com/views/20172023_16969273905470/1?:language=ko-KR&:display_count=n&:origin=viz_share_link?:showVizHome=no?:embed=true"
-            width="600"
+            src="https://public.tableau.com/views/_16969927078600/3?:language=ko-KR&:display_count=n&:origin=viz_share_link?:showVizHome=no?:embed=true"
+            width="1500"
             height="600"
             title="광어"
           />
