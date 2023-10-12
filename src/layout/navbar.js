@@ -33,7 +33,7 @@ function navbar() {
           <a href={`/Chart`}>트랜드</a>
         </h3>
         <h3 className="menulist pt-5">
-          <a href={`/Chart`}>아카이브</a>
+          <a href={`/list`}>아카이브</a>
         </h3>
       </div>
 
