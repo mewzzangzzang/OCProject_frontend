@@ -1,5 +1,4 @@
 import { Route, BrowserRouter, Routes } from "react-router-dom";
-import logo from "./logo.svg";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle";
@@ -13,7 +12,7 @@ import Navbar from "./layout/navbar";
 import Page2 from "./content/page2";
 import Page3 from "./content/page3";
 import Page4 from "./content/page4";
-import Test from "./content/test";
+import List from "./content/list";
 
 function App() {
   return (
@@ -28,7 +27,7 @@ function App() {
           <Route path="/page2" element={<Page2 />} />
           <Route path="/page3" element={<Page3 />} />
           <Route path="/page4" element={<Page4 />} />
-          <Route path="/test" element={<Test />} />
+          <Route path="/list" element={<List />} />
         </Routes>
       </BrowserRouter>
     </div>
