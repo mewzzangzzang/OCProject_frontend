@@ -64,38 +64,11 @@ export default class exportFlatfish extends PureComponent {
       <div className="all" mt-4>
         <div className="mapChart">
           <iframe
-            src="https://public.tableau.com/views/2022_16969071533950/1?:language=ko-KR&:display_count=n&:origin=viz_share_link?:showVizHome=no?:embed=true"
+            src="https://public.tableau.com/views/2022_16969042846270/2_1?:language=ko-KR&publish=yes&:display_count=n&:origin=viz_share_link?:showVizHome=no?:embed=true"
             width="1500"
-            height="600"
+            height="1000"
             title="광어 수출"
           />
-        </div>
-        <div className="chart" mt-5>
-          <div className="sizebarchart">
-            <div className="title">크기별 우럭 출하량</div>
-            <BarChart
-              width={1400}
-              height={350}
-              data={sizedata}
-              margin={{
-                top: 5,
-                right: 30,
-                left: 20,
-                bottom: 5,
-              }}
-            >
-              <CartesianGrid strokeDasharray="3 3" />
-              <XAxis dataKey="name" />
-              <YAxis
-                domain={[0, 550000, 1400000]}
-                ticks={[0, 100, 500, 10000, 550000, 1400000]}
-                tickCount={5}
-              />
-              <Tooltip />
-              <Legend align="center" margin={{ left: 100 }} />
-              <Bar dataKey="중량" fill="#8884d8" />
-            </BarChart>
-          </div>
         </div>
       </div>
     );
