@@ -1,5 +1,4 @@
 import { Route, BrowserRouter, Routes } from "react-router-dom";
-import logo from "./logo.svg";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle";
@@ -14,6 +13,7 @@ import Page2 from "./content/page2";
 import Page3 from "./content/page3";
 import Page4 from "./content/page4";
 import Test from "./content/test";
+
 import GoogleTrendsWidget from "./content/GoogleTrendsWidget ";
 
 function App() {
