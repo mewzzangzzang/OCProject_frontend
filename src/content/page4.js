@@ -3,9 +3,9 @@ import { fishData } from "./fishData";
 
 import ExportFlatfish from "./exportFlatfish";
 import ExportRockfish from "./exportRockfish";
-
+// 수출 페이지
 const Page4 = () => {
-  const [content, setContent] = useState("");
+  const [content, setContent] = useState("Rockfish");
 
   const handleClickButton = (e) => {
     const { name } = e.target;

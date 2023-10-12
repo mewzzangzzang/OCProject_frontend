@@ -1,5 +1,5 @@
 import React, { PureComponent } from "react";
-
+// 우럭 수입
 export default class importRockfish extends PureComponent {
   render() {
     return (

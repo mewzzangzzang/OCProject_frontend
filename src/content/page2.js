@@ -1,11 +1,12 @@
-// 테스트 2번 페이지
+// 출하량 페이지
 import React, { useState } from "react";
 import Chart2 from "./chart2";
 import Chart3 from "./chart3";
 import { fishData } from "./fishData";
+import "./page2.css";
 
 const Page2 = () => {
-  const [content, setContent] = useState("");
+  const [content, setContent] = useState("Rockfish");
 
   const handleClickButton = (e) => {
     const { name } = e.target;
@@ -25,7 +26,6 @@ const Page2 = () => {
           {data.text}
         </button>
       ))}
-
       {/* 선택한 컴포넌트 렌더링 */}
       {selectComponent[content]}
     </div>

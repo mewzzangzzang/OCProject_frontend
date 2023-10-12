@@ -1,7 +1,10 @@
 button{
-   padding: 1rem 2rem;
-   margin-right: 1rem;
+   /* padding: 1rem 2rem; */
+   /* margin-right: 1rem; */
+   margin-right: 10px;
+   margin-left: 30px;
    color: #111111;
    background-color: #eeeeee;
    border-radius: 2rem;
+   float: left;
 }

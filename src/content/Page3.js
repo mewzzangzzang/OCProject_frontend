@@ -1,10 +1,10 @@
+// 수입 페이지
 import React, { useState } from "react";
 import ImportFlatfish from "./importFlatfish";
 import ImportRockfish from "./importRockfish";
 import { fishData } from "./fishData";
-
 const Page3 = () => {
-  const [content, setContent] = useState("");
+  const [content, setContent] = useState("Rockfish");
 
   const handleClickButton = (e) => {
     const { name } = e.target;
@@ -24,7 +24,6 @@ const Page3 = () => {
           {data.text}
         </button>
       ))}
-
       {/* 선택한 컴포넌트 렌더링 */}
       {selectComponent[content]}
     </div>
