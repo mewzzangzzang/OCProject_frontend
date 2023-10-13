@@ -21,31 +21,42 @@ function List() {
       console.error("Error fetching data:", error);
     }
   };
+  const detail = async () => {
+    try {
+      const result = await axios.get(`http://127.0.0.1:8000/list/{idx}`);
+      if (Array.isArray(result.data)) {
+        setList(result.data);
+      } else {
+        console.error("Server response is not an array.");
+      }
+    } catch (error) {
+      console.error("Error fetching data:", error);
+    }
+  };
 
   return (
     <div className="container animation">
-      <h1 className="text-left my-5">자료 아카이브</h1>
+      <h1 className="text-center my-5"># To Do List</h1>
       <table className="table table-hover rounded shadow my-3">
         <thead>
           <tr className="table-success">
+            <th scope="col">💚</th>
             <th scope="col" className="title">
-              번호
+              TITLE
             </th>
             <th scope="col" className="title">
-              제목
+              VIEW
             </th>
             <th scope="col" className="title">
-              작성자
+              DELETE
             </th>
             <th scope="col" className="title">
-              작성일
+              PIN
             </th>
             <th scope="col" className="title">
-              조회수
+              UPDATE
             </th>
-            <th scope="col" className="title">
-              첨부파일
-            </th>
+            <th scope="col" className="title"></th>
           </tr>
         </thead>
         <tbody>

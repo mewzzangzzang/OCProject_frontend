@@ -35,6 +35,12 @@ function navbar() {
         <h3 className="menulist pt-5">
           <a href={`/list`}>아카이브</a>
         </h3>
+        <h3 className="menulist pt-5">
+          <a href={`/login`}>로그인</a>
+        </h3>
+        <h3 className="menulist pt-5">
+          <a href={`/logout`}>로그아웃</a>
+        </h3>
       </div>
 
       <div className="search shadow"></div>
