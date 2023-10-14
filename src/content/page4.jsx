@@ -19,7 +19,8 @@ const Page4 = () => {
   };
 
   return (
-    <div className="all" mt-4>
+    <div className="all mt-4">
+      <h1>ㅤ</h1>
       {fishData.map((data) => (
         <button onClick={handleClickButton} name={data.name} key={data.key}>
           {data.text}

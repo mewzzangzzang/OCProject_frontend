@@ -13,66 +13,129 @@ import {
   Legend,
 } from "recharts";
 
-const data2022 = [
+const flatdata2022 = [
   {
     name: "1월",
-    실제값: 9955,
-    예측값: 10177,
+    실제값: 13471,
+    예측값: 12417,
   },
   {
     name: "2월",
-    실제값: 12959,
-    예측값: 8421,
+    실제값: 13248,
+    예측값: 12210,
   },
   {
     name: "3월",
-    실제값: 9874,
-    예측값: 6252,
+    실제값: 12847,
+    예측값: 11796,
   },
   {
     name: "4월",
-    실제값: 8389,
-    예측값: 6137,
+    실제값: 12988,
+    예측값: 11648,
   },
   {
     name: "5월",
-    실제값: 4534,
-    예측값: 4165,
+    실제값: 13666,
+    예측값: 12370,
   },
   {
     name: "6월",
-    실제값: 5469,
-    예측값: 3754,
+    실제값: 13832,
+    예측값: 12537,
   },
   {
     name: "7월",
-    실제값: 5469,
-    예측값: 3754,
+    실제값: 13806,
+    예측값: 12618,
   },
   {
     name: "8월",
-    실제값: 5469,
-    예측값: 3754,
+    실제값: 13706,
+    예측값: 12508,
   },
   {
     name: "9월",
-    실제값: 5469,
-    예측값: 3754,
+    실제값: 13598,
+    예측값: 12814,
   },
   {
     name: "10월",
-    실제값: 5469,
-    예측값: 3754,
+    실제값: 14470,
+    예측값: 12816,
   },
   {
     name: "11월",
-    실제값: 5469,
-    예측값: 3754,
+    실제값: 11528,
+    예측값: 13477,
   },
   {
     name: "12월",
-    실제값: 5469,
-    예측값: 3754,
+    실제값: 14166,
+    예측값: 10549,
+  },
+];
+
+const rockdata2022 = [
+  {
+    name: "1월",
+    실제값: 16053,
+    예측값: 12744,
+  },
+  {
+    name: "2월",
+    실제값: 12716,
+    예측값: 12576,
+  },
+  {
+    name: "3월",
+    실제값: 10880,
+    예측값: 10320,
+  },
+  {
+    name: "4월",
+    실제값: 9067,
+    예측값: 9905,
+  },
+  {
+    name: "5월",
+    실제값: 7471,
+    예측값: 8489,
+  },
+  {
+    name: "6월",
+    실제값: 8318,
+    예측값: 7260,
+  },
+  {
+    name: "7월",
+    실제값: 10903,
+    예측값: 8804,
+  },
+  {
+    name: "8월",
+    실제값: 9144,
+    예측값: 11042,
+  },
+  {
+    name: "9월",
+    실제값: 13199,
+    예측값: 8307,
+  },
+  {
+    name: "10월",
+    실제값: 13493,
+    예측값: 12649,
+  },
+  {
+    name: "11월",
+    실제값: 12396,
+    예측값: 11569,
+  },
+  {
+    name: "12월",
+    실제값: 11059,
+    예측값: 10892,
   },
 ];
 
@@ -136,7 +199,7 @@ export default class prediction22 extends PureComponent {
           <LineChart
             width={730}
             height={350}
-            data={data2022}
+            data={flatdata2022}
             margin={{
               top: 5,
               right: 30,
@@ -148,8 +211,8 @@ export default class prediction22 extends PureComponent {
             <CartesianGrid strokeDasharray="3 3" />
             <XAxis dataKey="name" padding={{ left: 50, right: 50 }} />
             <YAxis
-              domain={[0, 15000]}
-              ticks={[0, 5000, 10000, 15000]}
+              domain={[10000, 15000]}
+              ticks={[10000, 12500, 15000]}
               tickCount={4}
             />
             <Tooltip />
@@ -174,7 +237,7 @@ export default class prediction22 extends PureComponent {
           <LineChart
             width={730}
             height={350}
-            data={data2022}
+            data={rockdata2022}
             margin={{
               top: 5,
               right: 30,
@@ -186,8 +249,8 @@ export default class prediction22 extends PureComponent {
             <CartesianGrid strokeDasharray="3 3" />
             <XAxis dataKey="name" padding={{ left: 50, right: 50 }} />
             <YAxis
-              domain={[0, 15000]}
-              ticks={[0, 5000, 10000, 15000]}
+              domain={[5000, 20000]}
+              ticks={[5000, 10000, 15000, 20000]}
               tickCount={4}
             />
             <Tooltip />

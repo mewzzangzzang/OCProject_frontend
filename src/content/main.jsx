@@ -3,7 +3,8 @@ import "./main.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-import Prediction22 from "./prediction22";
+import RechartPrediction from "./RechartPrediction";
+import TableauPrediction from "./TableauPrediction";
 import { predictionData } from "./fishData";
 
 const Main = () => {
@@ -16,8 +17,8 @@ const Main = () => {
 
   // 그래프 종류
   const selectComponent = {
-    Rechart: <Prediction22 />,
-    // Tableau: <Chart3 />,
+    Rechart: <RechartPrediction />,
+    // Tableau: <TableauPrediction />,
   };
 
   return (
