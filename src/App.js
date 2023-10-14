@@ -13,6 +13,9 @@ import Page2 from "./content/page2";
 import Page3 from "./content/page3";
 import Page4 from "./content/page4";
 import List from "./content/list";
+import Trend from "./content/GoogleTrendsWidget ";
+import Login from "./content/login";
+import Register from "./content/register";
 
 function App() {
   return (
@@ -20,6 +23,8 @@ function App() {
       <BrowserRouter>
         <Navbar className="navbar" />
         <Routes>
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
           <Route path="/" element={<Main />} />
           <Route path="/chart" element={<Chart />} />
           <Route path="/chart2" element={<Chart2 />} />
@@ -28,6 +33,7 @@ function App() {
           <Route path="/page3" element={<Page3 />} />
           <Route path="/page4" element={<Page4 />} />
           <Route path="/list" element={<List />} />
+          <Route path="/trend" element={<Trend />} />
         </Routes>
       </BrowserRouter>
     </div>
