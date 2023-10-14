@@ -11,7 +11,7 @@ function List() {
 
   const loadList = async () => {
     try {
-      const result = await axios.get(`http://127.0.0.1:8000/list/`);
+      const result = await axios.get(`http://127.0.0.1:8000/test/`);
       if (Array.isArray(result.data)) {
         setList(result.data);
       } else {
@@ -20,6 +20,14 @@ function List() {
     } catch (error) {
       console.error("Error fetching data:", error);
     }
+  };
+
+  const deleteList = async (idx) => {
+    if (window.confirm("진짜 지워요? 🥺")) {
+      await axios.delete(`http://localhost:8080/list/${idx}`);
+      window.alert("삭제 완료 😭");
+    }
+    loadList();
   };
 
   return (
@@ -51,18 +59,51 @@ function List() {
         <tbody>
           {list.map((item, index) => (
             <tr key={item.idx}>
-              <th scope="row">#{index + 1}</th>
-              <td>{item.title}</td>
-              <td>
+              <th scope="row">
+                #{index + 1}
                 <Link
                   to={`/list/${item.idx}`}
                   className="btn btn-outline-success mx-1"
-                >
-                  🌵
-                </Link>
+                ></Link>
+              </th>
+              <td>
+                {item.title}
+                <Link
+                  to={`/list/${item.idx}`}
+                  className="btn btn-outline-success mx-1"
+                ></Link>
               </td>
-              <td>View Content Here</td> {/* "VIEW" 열 내용 추가 */}
-              <td>Delete Button Here</td> {/* "DELETE" 열 내용 추가 */}
+              <td>
+                {item.writer}
+                <Link
+                  to={`/list/${item.idx}`}
+                  className="btn btn-outline-success mx-1"
+                ></Link>
+              </td>
+              <td>
+                {item.post_date}
+                <Link
+                  to={`/list/${item.idx}`}
+                  className="btn btn-outline-success mx-1"
+                ></Link>
+              </td>
+              <td>{item.hit}</td>
+              <td>
+                {/* 링크는 파일다운로드로 */}
+                {item.filename}
+                <Link
+                  to={`/list/${item.idx}`}
+                  className="btn btn-outline-success mx-1"
+                ></Link>
+              </td>
+              <td>
+                <button
+                  onClick={() => deleteList(item.idx)}
+                  className="btn btn-outline-warning px-3 mx-2 button"
+                >
+                  delete
+                </button>
+              </td>
             </tr>
           ))}
         </tbody>

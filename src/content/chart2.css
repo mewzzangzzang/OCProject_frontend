@@ -23,7 +23,23 @@ h2{
   text-align: center;
 }
 
- .regionchart {
+.flatchart2022{
+  float: left;
+}
+
+.rockchart2022{
+  float: left;
+}
+
+.flatchart2024{
+  float: left;
+}
+
+.regionchart {
+  float: left;
+ }
+
+ .rockchart2024{
   float: left;
  }
 
