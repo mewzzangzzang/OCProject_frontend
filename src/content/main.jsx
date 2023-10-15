@@ -18,7 +18,7 @@ const Main = () => {
   // 그래프 종류
   const selectComponent = {
     Rechart: <RechartPrediction />,
-    // Tableau: <TableauPrediction />,
+    Tableau: <TableauPrediction />,
   };
 
   return (
