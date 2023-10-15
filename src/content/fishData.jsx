@@ -7,3 +7,8 @@ export const predictionData = [
   { id: 1, text: "리차트", name: "Rechart" },
   { id: 2, text: "태블로", name: "Tableau" },
 ];
+
+export const googleData = [
+  { id: 1, text: "geo", name: "Geo" },
+  { id: 2, text: "time", name: "Time" },
+];

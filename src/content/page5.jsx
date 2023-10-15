@@ -5,7 +5,7 @@ import Googletime from "./googletime";
 import { googleData } from "./fishData";
 // 수출 페이지
 const Page5 = () => {
-  const [content, setContent] = useState("");
+  const [content, setContent] = useState("GEO");
 
   const handleClickButton = (e) => {
     const { name } = e.target;
