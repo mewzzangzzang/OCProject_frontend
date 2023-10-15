@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
+import "./google.css";
 
-const GoogleTrendsWidgetTimeSeries = () => {
+const GoogleTrendsWidgetGeo = () => {
   useEffect(() => {
     const script = document.createElement("script");
     script.src =
@@ -24,7 +25,7 @@ const GoogleTrendsWidgetTimeSeries = () => {
     height: "200px", // 원하는 높이
   };
 
-  return <div id="trends-widget" style={widgetStyle} />;
+  return <div style={widgetStyle} />;
 };
 
-export default GoogleTrendsWidgetTimeSeries;
+export default GoogleTrendsWidgetGeo;

@@ -28,9 +28,9 @@ function navbar() {
         <h3 className="menulist pt-5">
           <a href={`/Page4`}>수출</a>
         </h3>
-        <h3 className="menulist pt-5">
+        {/* <h3 className="menulist pt-5">
           <a href={`/Trend`}>트랜드</a>
-        </h3>
+        </h3> */}
         <h3 className="menulist pt-5">
           <a href={`/login`}>로그인</a>
         </h3>
@@ -38,7 +38,7 @@ function navbar() {
           <a href={`/logout`}>로그아웃</a>
         </h3>
         <h3 className="menulist pt-5">
-          <a href={`/navermap`}>맵</a>
+          <a href={`/navermap`}>트렌드 지도</a>
         </h3>
       </div>
 
