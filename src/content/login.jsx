@@ -1,7 +1,31 @@
-import React from "react";
 import "./register.css";
+import React, { useEffect, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import axios from "axios";
 
-const login = () => {
+function Login() {
+  let navigate = useNavigate();
+
+  const [user, setUser] = useState({
+    username: "",
+    password: "",
+  });
+
+  const onInputChange = (e) => {
+    setUser({
+      ...user,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const { username, password } = user;
+
+  const onSubmit = async (e) => {
+    e.preventDefault();
+    axios.post("http://127.0.0.1:8000/signin/", user);
+    navigate("/");
+  };
+
   return (
     <div className="all mt-4">
       <div className="line spacing">
@@ -12,26 +36,36 @@ const login = () => {
       </div>
       <div className="container" id="container">
         <div className="form-container sign-in-container">
-          <form className="formLogin" action="#">
+          <form className="formLogin" onSubmit={onSubmit}>
             <h1>Sign in</h1>
             <div className="social-container">
               <a href="#" className="social">
                 <h4>N</h4>
               </a>
-              {/* <a href="#" class="social">
-              <i class="fab fa-google-plus-g"></i>
-            </a>
-            <a href="#" class="social">
-              <i class="fab fa-linkedin-in"></i>
-            </a> */}
             </div>
             <span>or use your account</span>
             <div className="signBox">
-              <input type="id" placeholder="id" />
-              <input type="password" placeholder="Password" />
+              <input
+                required
+                type="text"
+                id="username"
+                value={username}
+                onChange={onInputChange}
+                name="username"
+                placeholder="Name"
+              />
+              <input
+                required
+                id="password"
+                value={password}
+                onChange={onInputChange}
+                name="password"
+                type="password"
+                placeholder="Password"
+              />
             </div>
             {/* <a href="#">Forgot your password?</a> */}
-            <button>로그인</button>
+            <button onClick={() => alert("🐟 로그인 완료 ")}>로그인</button>
           </form>
         </div>
         <div className="overlay-container">
@@ -50,6 +84,6 @@ const login = () => {
       </div>
     </div>
   );
-};
+}
 
-export default login;
+export default Login;
