@@ -16,6 +16,7 @@ import List from "./content/list";
 import Trend from "./content/GoogleTrendsWidget ";
 import Login from "./content/login";
 import Register from "./content/register";
+import Navermap from "./content/navermap";
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
           <Route path="/page4" element={<Page4 />} />
           <Route path="/list" element={<List />} />
           <Route path="/trend" element={<Trend />} />
+          <Route path="/navermap" element={<Navermap />} />
         </Routes>
       </BrowserRouter>
     </div>
