@@ -146,47 +146,110 @@ const data2024 = [
   },
   {
     name: "2월",
-    예측값: 8421,
+    예측값: 12177,
   },
   {
     name: "3월",
-    예측값: 6252,
+    예측값: 11577,
   },
   {
     name: "4월",
-    예측값: 6137,
+    예측값: 10177,
   },
   {
     name: "5월",
-    예측값: 4165,
+    예측값: 9608,
   },
   {
     name: "6월",
-    예측값: 3754,
+    예측값: 11577,
   },
   {
     name: "7월",
-    예측값: 3754,
+    예측값: 13579,
   },
   {
     name: "8월",
-    예측값: 3754,
+    예측값: 12086,
   },
   {
     name: "9월",
-    예측값: 3754,
+    예측값: 11577,
   },
   {
     name: "10월",
-    예측값: 3754,
+    예측값: 10068,
   },
   {
     name: "11월",
-    예측값: 3754,
+    예측값: 11577,
   },
   {
     name: "12월",
-    예측값: 3754,
+    예측값: 12577,
+  },
+];
+
+const rockdata2024 = [
+  {
+    name: "1월",
+    실제값: 16053,
+    예측값: 12744,
+  },
+  {
+    name: "2월",
+    실제값: 12716,
+    예측값: 12576,
+  },
+  {
+    name: "3월",
+    실제값: 10880,
+    예측값: 10320,
+  },
+  {
+    name: "4월",
+    실제값: 9067,
+    예측값: 9905,
+  },
+  {
+    name: "5월",
+    실제값: 7471,
+    예측값: 8489,
+  },
+  {
+    name: "6월",
+    실제값: 8318,
+    예측값: 7260,
+  },
+  {
+    name: "7월",
+    실제값: 10903,
+    예측값: 8804,
+  },
+  {
+    name: "8월",
+    실제값: 9144,
+    예측값: 11042,
+  },
+  {
+    name: "9월",
+    실제값: 13199,
+    예측값: 8307,
+  },
+  {
+    name: "10월",
+    실제값: 13493,
+    예측값: 12649,
+  },
+  {
+    name: "11월",
+    실제값: 12396,
+    예측값: 11569,
+  },
+  {
+    name: "12월",
+    실제값: 11059,
+    예측값: 10892,
   },
 ];
 
@@ -287,8 +350,8 @@ export default class prediction22 extends PureComponent {
             <CartesianGrid strokeDasharray="3 3" />
             <XAxis dataKey="name" padding={{ left: 50, right: 50 }} />
             <YAxis
-              domain={[0, 15000]}
-              ticks={[0, 5000, 10000, 15000]}
+              domain={[5000, 15000]}
+              ticks={[5000, 10000, 15000]}
               tickCount={4}
             />
             <Tooltip />
@@ -313,7 +376,7 @@ export default class prediction22 extends PureComponent {
           <LineChart
             width={730}
             height={350}
-            data={data2024}
+            data={rockdata2024}
             margin={{
               top: 5,
               right: 30,
@@ -325,19 +388,12 @@ export default class prediction22 extends PureComponent {
             <CartesianGrid strokeDasharray="3 3" />
             <XAxis dataKey="name" padding={{ left: 50, right: 50 }} />
             <YAxis
-              domain={[0, 15000]}
-              ticks={[0, 5000, 10000, 15000]}
+              domain={[5000, 15000]}
+              ticks={[5000, 10000, 15000]}
               tickCount={4}
             />
             <Tooltip />
             <Legend />
-            <Line
-              type="monotone"
-              dataKey="실제값"
-              stroke="#8884d8"
-              activeDot={{ r: 8 }}
-              strokeWidth={2}
-            />
             <Line
               type="monotone"
               dataKey="예측값"

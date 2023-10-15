@@ -20,7 +20,7 @@ class navermap extends Component {
 
   render() {
     return (
-      <div style={{ width: "1400", height: "500" }}>
+      <div style={{ width: "1400px", height: "500px" }}>
         <div id="naver-map" style={{ width: "100%", height: "100%" }}></div>
       </div>
     );
