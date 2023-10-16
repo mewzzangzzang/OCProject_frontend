@@ -12,6 +12,7 @@ import Navbar from "./layout/navbar";
 import Page2 from "./content/page2";
 import Page3 from "./content/page3";
 import Page4 from "./content/page4";
+import Page5 from "./content/page5";
 import List from "./content/list";
 import Trend from "./content/GoogleTrendsWidget ";
 import Login from "./content/login";
@@ -33,6 +34,7 @@ function App() {
           <Route path="/page2" element={<Page2 />} />
           <Route path="/page3" element={<Page3 />} />
           <Route path="/page4" element={<Page4 />} />
+          <Route path="/page5" element={<Page5 />} />
           <Route path="/list" element={<List />} />
           <Route path="/trend" element={<Trend />} />
           <Route path="/navermap" element={<Navermap />} />

@@ -2,33 +2,6 @@ import "./register.css";
 import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
-// import { getCookie } from "your-cookie-util"; // 이곳에 실제로 사용하는 쿠키 관련 유틸리티의 경로를 넣으세요.
-// const csrf_token = getCookie("csrftoken"); // 쿠키 유틸리티를 사용해서 csrf 토큰을 가져옵니다.
-
-// import { useNavigate } from "react-router-dom";
-
-// const navigate = useNavigate();
-
-// const {} = userData;
-
-// function textInput() {
-//   var getUsername = document.getElementById("username").value;
-//   var getEmail = document.getElementById("email").value;
-//   var getPassword = document.getElementById("password").value;
-//   var getPassword2 = document.getElementById("password2").value;
-//   axios
-//     .post("http://127.0.0.1:8000/signupTest/", {
-//       username: getUsername,
-//       email: getEmail,
-//     })
-//     .then(function (response) {
-//       console.log(response);
-//     })
-//     .catch(function (error) {
-//       console.log(error);
-//     });
-//   <Link to="/notice"></Link>;
-// }
 
 function Register() {
   let navigate = useNavigate();
@@ -40,6 +13,8 @@ function Register() {
     password2: "",
   });
 
+  const [csrf_token, setCsrfToken] = useState("");
+
   const onInputChange = (e) => {
     setUser({
       ...user,
@@ -49,16 +24,33 @@ function Register() {
 
   const { username, email, password, password2 } = user;
 
-  // const csrf_token = document.getElementsByName("csrfmiddlewaretoken")[0].value;
+  useEffect(() => {
+    // CSRF 토큰을 가져오는 요청
+    axios
+      .get("http://127.0.0.1:8000/csrf_token/")
+      .then((response) => {
+        const csrf_token = response.data.csrf_token;
+        setCsrfToken(csrf_token);
+        // 이제 csrf_token을 사용하여 요청을 보낼 수 있습니다.
+      })
+      .catch((error) => {
+        console.error("Error fetching CSRF token:", error);
+      });
+  }, []); // 컴포넌트가 마운트될 때 한 번만 실행
+
+  axios.defaults.xsrfCookieName = "csrftoken";
+  axios.defaults.xsrfHeaderName = "X-CSRFTOKEN";
 
   const onSubmit = async (e) => {
     e.preventDefault();
-    await axios.post("http://localhost:8080/signupTest", user, {
+    axios.post("http://127.0.0.1:8000/signupTest/", user, {
       headers: {
-        // "X-CSRFToken": csrf_token,
+        Accept: "application/json",
+        "X-CSRFToken": csrf_token,
+        "Content-Type": "application/json",
       },
     });
-    navigate("/");
+    navigate("/login");
   };
 
   return (
@@ -109,7 +101,12 @@ function Register() {
               type="password"
               placeholder="Confirm Password"
             />
-            <button type="submit">회원가입</button>
+            <button
+              type="submit"
+              onClick={() => alert("🐟 가입 완료! 환영합니다 ")}
+            >
+              회원가입
+            </button>
           </form>
         </div>
         <div className="overlay-container">
