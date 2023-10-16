@@ -53,8 +53,13 @@ class NaverMapComponent extends Component {
 
   render() {
     return (
-      <div style={{ width: "100%", height: "500px" }}>
-        <div id="naver-map" style={{ width: "100%", height: "100%" }}></div>
+      <div className="all mt-4">
+        <h1>ㅤ</h1>
+        <div className="mapChart mt-4">
+          <div style={{ width: "1500px", height: "800px" }}>
+            <div id="naver-map" style={{ width: "100%", height: "100%" }}></div>
+          </div>
+        </div>
       </div>
     );
   }
