@@ -1,11 +1,11 @@
-// 테스트 2번 페이지
 import React, { useState } from "react";
-import Chart2 from "./chart2";
-import Chart3 from "./chart3";
 import { fishData } from "./fishData";
 
-const Page2 = () => {
-  const [content, setContent] = useState("");
+import ExportFlatfish from "./exportFlatfish";
+import ExportRockfish from "./exportRockfish";
+// 수출 페이지
+const Page4 = () => {
+  const [content, setContent] = useState("Rockfish");
 
   const handleClickButton = (e) => {
     const { name } = e.target;
@@ -14,12 +14,13 @@ const Page2 = () => {
 
   // 어종
   const selectComponent = {
-    Rockfish: <Chart2 />,
-    Flatfish: <Chart3 />,
+    Rockfish: <ExportRockfish />,
+    Flatfish: <ExportFlatfish />,
   };
 
   return (
     <div className="all mt-4">
+      <h1>ㅤ</h1>
       {fishData.map((data) => (
         <button onClick={handleClickButton} name={data.name} key={data.key}>
           {data.text}
@@ -32,4 +33,4 @@ const Page2 = () => {
   );
 };
 
-export default Page2;
+export default Page4;

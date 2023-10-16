@@ -12,7 +12,12 @@ import Navbar from "./layout/navbar";
 import Page2 from "./content/page2";
 import Page3 from "./content/page3";
 import Page4 from "./content/page4";
-import Test from "./content/test";
+import Page5 from "./content/page5";
+import List from "./content/list";
+import Trend from "./content/GoogleTrendsWidget ";
+import Login from "./content/login";
+import Register from "./content/register";
+import Navermap from "./content/navermap";
 
 import GoogleTrendsWidget from "./content/GoogleTrendsWidget ";
 
@@ -22,6 +27,8 @@ function App() {
       <BrowserRouter>
         <Navbar className="navbar" />
         <Routes>
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
           <Route path="/" element={<Main />} />
           <Route path="/chart" element={<Chart />} />
           <Route path="/chart2" element={<Chart2 />} />
@@ -29,8 +36,11 @@ function App() {
           <Route path="/page2" element={<Page2 />} />
           <Route path="/page3" element={<Page3 />} />
           <Route path="/page4" element={<Page4 />} />
-          <Route path="/test" element={<Test />} />
-          <Route path="/Google" element={<GoogleTrendsWidget />} />
+
+          <Route path="/page5" element={<Page5 />} />
+          <Route path="/list" element={<List />} />
+          <Route path="/trend" element={<Trend />} />
+          <Route path="/navermap" element={<Navermap />} />
         </Routes>
       </BrowserRouter>
     </div>

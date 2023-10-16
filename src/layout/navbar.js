@@ -18,7 +18,6 @@ function navbar() {
               />
             </svg>
           </div>
-          <h1 className="title p-3">TEST</h1>
         </a>
         <h3 className="menulist pt-5">
           <a href={`/Page2`}>출하량</a>
@@ -30,10 +29,13 @@ function navbar() {
           <a href={`/Page4`}>수출</a>
         </h3>
         <h3 className="menulist pt-5">
-          <a href={`/Google`}>트랜드</a>
+          <a href={`/Page5`}>트랜드</a>
         </h3>
         <h3 className="menulist pt-5">
-          <a href={`/test`}>아카이브</a>
+          <a href={`/login`}>유저</a>
+        </h3>
+        <h3 className="menulist pt-5">
+          <a href={`/navermap`}>맵</a>
         </h3>
       </div>
 

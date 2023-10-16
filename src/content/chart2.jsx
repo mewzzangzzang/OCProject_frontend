@@ -169,53 +169,6 @@ export default class chart2 extends PureComponent {
           </LineChart>
         </div>{" "}
         {/* regionchart */}
-        {/* <div className="sizechart">
-          <div className="title">크기별 우럭 출하량</div>
-          <LineChart
-            width={500}
-            height={200}
-            data={sizedata}
-            margin={{
-              top: 5,
-              right: 30,
-              left: 20,
-              bottom: 5,
-            }}
-          >
-            <title text="크기별 우럭 출하량" />
-            <CartesianGrid strokeDasharray="3 3" />
-            <XAxis dataKey="name" padding={{ left: 50, right: 50 }} />
-            <YAxis domain={[0, 12000]} ticks={[0, 6000, 12000]} tickCount={3} />
-            <Tooltip />
-            <Legend />
-            <Line
-              type="monotone"
-              dataKey="400g 미만"
-              stroke="#b382ca"
-              activeDot={{ r: 8 }}
-              strokeWidth={2}
-            />
-            <Line
-              type="monotone"
-              dataKey="400g~500g"
-              stroke="#35bd70"
-              strokeWidth={2}
-            />
-            <Line
-              type="monotone"
-              dataKey="500~600g"
-              stroke="#ffb330"
-              strokeWidth={2}
-            />
-            <Line
-              type="monotone"
-              dataKey="600g 이상"
-              stroke="#ff00fb"
-              strokeWidth={2}
-            />
-          </LineChart>
-        </div>{" "} */}
-        {/* sizechart */}
         <div className="sizebarchart">
           <div className="title">크기별 우럭 출하량</div>
           <BarChart

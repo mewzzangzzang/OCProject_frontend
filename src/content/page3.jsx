@@ -1,11 +1,10 @@
+// 수입 페이지
 import React, { useState } from "react";
+import ImportFlatfish from "./importFlatfish";
+import ImportRockfish from "./importRockfish";
 import { fishData } from "./fishData";
-
-import ExportFlatfish from "./exportFlatfish";
-import ExportRockfish from "./exportRockfish";
-
-const Page4 = () => {
-  const [content, setContent] = useState("");
+const Page3 = () => {
+  const [content, setContent] = useState("Rockfish");
 
   const handleClickButton = (e) => {
     const { name } = e.target;
@@ -14,22 +13,22 @@ const Page4 = () => {
 
   // 어종
   const selectComponent = {
-    Rockfish: <ExportRockfish />,
-    Flatfish: <ExportFlatfish />,
+    Rockfish: <ImportRockfish />,
+    Flatfish: <ImportFlatfish />,
   };
 
   return (
-    <div className="all" mt-4>
+    <div className="all mt-4">
+      <h1>ㅤ</h1>
       {fishData.map((data) => (
         <button onClick={handleClickButton} name={data.name} key={data.key}>
           {data.text}
         </button>
       ))}
-
       {/* 선택한 컴포넌트 렌더링 */}
       {selectComponent[content]}
     </div>
   );
 };
 
-export default Page4;
+export default Page3;

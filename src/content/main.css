@@ -2,26 +2,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@600&display=swap');
 
-.menu1Div {
+/* .menu1Div {
     float: left;
 }
 
 .menu2Div {
     float: left;
-}
+} */
+
+button{
+    float: left;
+ }
 
 .menu {
     width: 25vh;
     height: 100vh;
     border-radius: 30px;
-    background: #7F7FD5;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to top, #E2D4F7 , #86A8E7);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to top, #E2D4F7 , #86A8E7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+    background: #7F7FD5; 
+    background: -webkit-linear-gradient(to top, #E2D4F7 , #86A8E7);  
+    background: linear-gradient(to top, #E2D4F7 , #86A8E7); 
 }
 
 .menu2 {
-    width: 155vh;
+    width: 150vh;
     height: 97vh;
     border-radius: 30px;
     background: #7F7FD5;  /* fallback for old browsers */
@@ -32,7 +35,7 @@
     top: -20px;
 }
 
-.datachart {
+/* .datachart {
     width: 323px;
     height: 150px;
     background-color: whitesmoke;
@@ -53,7 +56,7 @@
     position: relative;
     top: 40px;
     color: rgba(0, 0, 0, 0.377);
-}
+} */
 
 .icon{
     color: whitesmoke;

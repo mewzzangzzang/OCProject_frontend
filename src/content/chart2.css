@@ -10,8 +10,8 @@
    font-size: 24px;
    font-weight: bold;
    text-align: left;
-   margin-top: 10px;
-   margin-bottom: 10px;
+   margin-top: 30px;
+   margin-bottom: 15px;
    margin-left: 50px;
    color: black;
  }
@@ -22,7 +22,24 @@ h2{
   clear: both;
   text-align: center;
 }
- .regionchart {
+
+.flatchart2022{
+  float: left;
+}
+
+.rockchart2022{
+  float: left;
+}
+
+.flatchart2024{
+  float: left;
+}
+
+.regionchart {
+  float: left;
+ }
+
+ .rockchart2024{
   float: left;
  }
 
@@ -46,6 +63,14 @@ h2{
  }
 
  .americachart{
+  float: left;
+ }
+
+ .singaporechart{
+  float: left;
+ }
+
+ .canadachart{
   float: left;
  }
 
