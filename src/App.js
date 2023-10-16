@@ -17,7 +17,7 @@ import List from "./content/list";
 import Trend from "./content/GoogleTrendsWidget ";
 import Login from "./content/login";
 import Register from "./content/register";
-import Navermap from "./content/navermap";
+import Navermap from "./content/navermap copy";
 
 function App() {
   return (

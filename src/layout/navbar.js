@@ -28,14 +28,16 @@ function navbar() {
         <h3 className="menulist pt-5">
           <a href={`/Page4`}>수출</a>
         </h3>
+
         <h3 className="menulist pt-5">
           <a href={`/Page5`}>트랜드</a>
         </h3>
+
         <h3 className="menulist pt-5">
           <a href={`/login`}>유저</a>
         </h3>
         <h3 className="menulist pt-5">
-          <a href={`/navermap`}>맵</a>
+          <a href={`/navermap`}>트렌드 지도</a>
         </h3>
       </div>
 

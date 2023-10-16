@@ -2,10 +2,11 @@ import React, { useState } from "react";
 
 import Googlegeo from "./googlegeo";
 import Googletime from "./googletime";
+import Navermap from "./navermap";
 import { googleData } from "./fishData";
 // 수출 페이지
 const Page5 = () => {
-  const [content, setContent] = useState("GEO");
+  const [content, setContent] = useState("Map");
 
   const handleClickButton = (e) => {
     const { name } = e.target;
@@ -16,6 +17,7 @@ const Page5 = () => {
   const selectComponent = {
     Geo: <Googlegeo />,
     Time: <Googletime />,
+    Map: <Navermap />,
   };
 
   return (
