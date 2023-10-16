@@ -150,20 +150,20 @@ export default class chart2 extends PureComponent {
             <Line
               type="monotone"
               dataKey="경남"
-              stroke="#8884d8"
+              stroke="#2a9d8f"
               activeDot={{ r: 8 }}
               strokeWidth={2}
             />
             <Line
               type="monotone"
               dataKey="전남"
-              stroke="#82ca9d"
+              stroke="#e9c46a"
               strokeWidth={2}
             />
             <Line
               type="monotone"
               dataKey="기타"
-              stroke="#d6bf6b"
+              stroke="#f4a261"
               strokeWidth={2}
             />
           </LineChart>
@@ -187,10 +187,10 @@ export default class chart2 extends PureComponent {
             <YAxis domain={[0, 12000]} ticks={[0, 6000, 12000]} tickCount={3} />
             <Tooltip />
             <Legend align="center" margin={{ left: 100 }} />
-            <Bar dataKey="400g 미만" fill="#8884d8" />
-            <Bar dataKey="400g~500g" fill="#8884d8" />
-            <Bar dataKey="500~600g" fill="#82ca9d" />
-            <Bar dataKey="600g 이상" fill="#82ca9d" />
+            <Bar dataKey="400g 미만" fill="#264653" />
+            <Bar dataKey="400g~500g" fill="#2a9d8f" />
+            <Bar dataKey="500~600g" fill="#e9c46a" />
+            <Bar dataKey="600g 이상" fill="#f4a261" />
           </BarChart>
         </div>
       </div>

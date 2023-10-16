@@ -36,9 +36,6 @@ function navbar() {
         <h3 className="menulist pt-5">
           <a href={`/login`}>유저</a>
         </h3>
-        <h3 className="menulist pt-5">
-          <a href={`/navermap`}>트렌드 지도</a>
-        </h3>
       </div>
 
       <div className="search shadow"></div>

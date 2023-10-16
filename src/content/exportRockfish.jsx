@@ -109,7 +109,7 @@ export default class exportRockfish extends PureComponent {
               <Line
                 type="monotone"
                 dataKey="중량"
-                stroke="#8884d8"
+                stroke="#2a9d8f"
                 activeDot={{ r: 8 }}
                 strokeWidth={2}
               />
@@ -141,7 +141,7 @@ export default class exportRockfish extends PureComponent {
               <Line
                 type="monotone"
                 dataKey="중량"
-                stroke="#8884d8"
+                stroke="#e9c46a"
                 activeDot={{ r: 8 }}
                 strokeWidth={2}
               />
@@ -173,7 +173,7 @@ export default class exportRockfish extends PureComponent {
               <Line
                 type="monotone"
                 dataKey="중량"
-                stroke="#8884d8"
+                stroke="#f4a261"
                 activeDot={{ r: 8 }}
                 strokeWidth={2}
               />

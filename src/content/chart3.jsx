@@ -143,20 +143,20 @@ export class chart3 extends PureComponent {
               <Line
                 type="monotone"
                 dataKey="제주도"
-                stroke="#8884d8"
+                stroke="#2a9d8f"
                 activeDot={{ r: 8 }}
                 strokeWidth={2}
               />
               <Line
                 type="monotone"
                 dataKey="완도"
-                stroke="#82ca9d"
+                stroke="#e9c46a"
                 strokeWidth={2}
               />
               <Line
                 type="monotone"
                 dataKey="기타"
-                stroke="#d6bf6b"
+                stroke="#f4a261"
                 strokeWidth={2}
               />
             </LineChart>
@@ -184,10 +184,10 @@ export class chart3 extends PureComponent {
               />
               <Tooltip />
               <Legend align="center" margin={{ left: 100 }} />
-              <Bar dataKey="500g 미만" fill="#8884d8" />
-              <Bar dataKey="500g~750g" fill="#8884d8" />
-              <Bar dataKey="750~1kg" fill="#82ca9d" />
-              <Bar dataKey="1kg 이상" fill="#82ca9d" />
+              <Bar dataKey="500g 미만" fill="#264653" />
+              <Bar dataKey="500g~750g" fill="#2a9d8f" />
+              <Bar dataKey="750~1kg" fill="#e9c46a" />
+              <Bar dataKey="1kg 이상" fill="#f4a261" />
             </BarChart>
           </div>
         </div>

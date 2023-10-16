@@ -366,7 +366,7 @@ export default class prediction22 extends PureComponent {
             <Line
               type="monotone"
               dataKey="예측값"
-              stroke="#82ca9d"
+              stroke="#e9c46a"
               strokeWidth={2}
             />
           </LineChart>
@@ -397,7 +397,7 @@ export default class prediction22 extends PureComponent {
             <Line
               type="monotone"
               dataKey="예측값"
-              stroke="#82ca9d"
+              stroke="#2a9d8f"
               strokeWidth={2}
             />
           </LineChart>
