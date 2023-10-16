@@ -30,14 +30,11 @@ function navbar() {
         </h3>
 
         <h3 className="menulist pt-5">
-          <a href={`/Page5`}>트랜드</a>
+          <a href={`/Page5`}>트렌드</a>
         </h3>
 
         <h3 className="menulist pt-5">
           <a href={`/login`}>유저</a>
-        </h3>
-        <h3 className="menulist pt-5">
-          <a href={`/navermap`}>트렌드 지도</a>
         </h3>
       </div>
 

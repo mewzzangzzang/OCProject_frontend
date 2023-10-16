@@ -9,7 +9,7 @@ export const predictionData = [
 ];
 
 export const googleData = [
-  { id: 1, text: "geo", name: "Geo" },
+  // { id: 1, text: "geo", name: "Geo" },
   { id: 2, text: "time", name: "Time" },
   { id: 3, text: "map", name: "Map" },
 ];

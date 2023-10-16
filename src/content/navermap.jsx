@@ -1,68 +1,136 @@
-import React, { Component } from "react";
-
-class NaverMapComponent extends Component {
-  componentDidMount() {
+import React, { useEffect, PureComponent } from "react";
+import { NaverMap } from "react-naver-maps";
+import "./chart2.css";
+import { Link } from "react-router-dom";
+import {
+  LineChart,
+  Line,
+  BarChart,
+  Bar,
+  XAxis,
+  YAxis,
+  CartesianGrid,
+  Tooltip,
+  Legend,
+} from "recharts";
+const sizedata = [
+  {
+    name: "관심도(100)",
+    전북: 54,
+    울산: 57,
+    제주도: 62,
+  },
+  {
+    name: "울산",
+    광어: 43,
+    우럭: 57,
+  },
+  {
+    name: "전북",
+    광어: 46,
+    우럭: 54,
+  },
+  {
+    name: "제주도",
+    광어: 38,
+    우럭: 62,
+  },
+];
+const MapWithCircle = () => {
+  useEffect(() => {
+    // 네이버 지도 API 스크립트를 동적으로 로드
     const script = document.createElement("script");
+    script.type = "text/javascript";
     script.src =
       "https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=qp4yrgzgxf";
     script.async = true;
-    script.onload = () => {
-      const map = new window.naver.maps.Map("naver-map", {
-        center: new window.naver.maps.LatLng(37.5666805, 126.9784147),
-        zoom: 1,
-      });
-
-      const polygon = new window.naver.maps.Polygon({
-        map: map,
-        paths: [
-          new window.naver.maps.LatLng(37.37544345085402, 127.11224555969238),
-          new window.naver.maps.LatLng(37.37230584065902, 127.10791110992432),
-          new window.naver.maps.LatLng(37.35975408751081, 127.10795402526855),
-          new window.naver.maps.LatLng(37.359924641705476, 127.11576461791992),
-          new window.naver.maps.LatLng(37.35931064479073, 127.12211608886719),
-          new window.naver.maps.LatLng(37.36043630196386, 127.12293148040771),
-          new window.naver.maps.LatLng(37.36354029942161, 127.12310314178465),
-          new window.naver.maps.LatLng(37.365211629488016, 127.12456226348876),
-        ],
-        fillColor: "#ff0000",
-        fillOpacity: 0.3,
-        strokeColor: "#ff0000",
-        strokeOpacity: 0.6,
-        strokeWeight: 3,
-      });
-
-      const polyline = new window.naver.maps.Polyline({
-        map: map,
-        path: [
-          new window.naver.maps.LatLng(37.359924641705476, 127.1148204803467),
-          new window.naver.maps.LatLng(37.36343797188166, 127.11486339569092),
-          new window.naver.maps.LatLng(37.368520071054576, 127.11473464965819),
-          new window.naver.maps.LatLng(37.3685882848096, 127.1088123321533),
-          new window.naver.maps.LatLng(37.37295383612657, 127.10876941680907),
-          new window.naver.maps.LatLng(37.38001321351567, 127.11851119995116),
-          new window.naver.maps.LatLng(37.378546827477855, 127.11984157562254),
-          new window.naver.maps.LatLng(37.376637072444105, 127.12052822113036),
-          new window.naver.maps.LatLng(37.37530703574853, 127.12190151214598),
-          new window.naver.maps.LatLng(37.371657839593894, 127.11645126342773),
-          new window.naver.maps.LatLng(37.36855417793982, 127.1207857131958),
-        ],
-      });
-    };
+    script.onload = initMap;
     document.head.appendChild(script);
-  }
+  }, []);
 
-  render() {
-    return (
-      <div className="all mt-4">
-        <h1>ㅤ</h1>
-        <div className="mapChart mt-4">
-          <div style={{ width: "1500px", height: "800px" }}>
-            <div id="naver-map" style={{ width: "100%", height: "100%" }}></div>
-          </div>
-        </div>
+  const initMap = () => {
+    const map = new window.naver.maps.Map("map", {
+      center: new window.naver.maps.LatLng(35.9166102, 127.2783881),
+      zoom: 7,
+    });
+
+    const circle1 = new window.naver.maps.Circle({
+      map: map,
+      center: new window.naver.maps.LatLng(
+        33.33563837131329,
+        126.61589378943937
+      ),
+      radius: 40000, // 반경 (미터)
+      fillColor: "#6B8F1E", // 채우기 색상
+      fillOpacity: 0.3, // 채우기 투명도
+      strokeColor: "#6B8F1E", // 테두리 색상
+      strokeOpacity: 0.8, // 테두리 투명도
+      strokeWeight: 2, // 테두리 두께
+    });
+
+    const circle2 = new window.naver.maps.Circle({
+      map: map,
+      center: new window.naver.maps.LatLng(
+        35.83563837131329,
+        127.14789378943937
+      ),
+      radius: 50000, // 반경 (미터)
+      fillColor: "#6B8F1E", // 채우기 색상
+      fillOpacity: 0.3, // 채우기 투명도
+      strokeColor: "#6B8F1E", // 테두리 색상
+      strokeOpacity: 0.8, // 테두리 투명도
+      strokeWeight: 2, // 테두리 두께
+    });
+
+    const circle3 = new window.naver.maps.Circle({
+      map: map,
+      center: new window.naver.maps.LatLng(
+        35.53563837131329,
+        129.34789378943937
+      ),
+      radius: 30000, // 반경 (미터)
+      fillColor: "#6B8F1E", // 채우기 색상
+      fillOpacity: 0.3, // 채우기 투명도
+      strokeColor: "#6B8F1E", // 테두리 색상
+      strokeOpacity: 0.8, // 테두리 투명도
+      strokeWeight: 2, // 테두리 두께
+    });
+  };
+
+  return (
+    <div className="all mt-4">
+      <h1>ㅤ</h1>
+      <h3>우럭에 대한 관심도 밀집지역</h3>
+      <div className="mapChart">
+        <div id="map" style={{ width: "1500px", height: "600px" }}></div>
       </div>
-    );
-  }
-}
+      <div className="sizebarchart">
+        <div className="title">지역별 우럭 관심도</div>
+        <BarChart
+          width={1500}
+          height={200}
+          data={sizedata}
+          margin={{
+            top: 5,
+            right: 30,
+            left: 20,
+            bottom: 5,
+          }}
+        >
+          <CartesianGrid strokeDasharray="3 3" />
+          <XAxis dataKey="name" />
+          <YAxis domain={[0, 100]} ticks={[0, 50, 100]} tickCount={3} />
+          <Tooltip />
+          <Legend align="center" margin={{ left: 100 }} />
+          <Bar dataKey="전북" fill="#8884d8" />
+          <Bar dataKey="울산" fill="#8884d8" />
+          <Bar dataKey="제주도" fill="#8884d8" />
+          <Bar dataKey="광어" fill="#B7DFFF" />
+          <Bar dataKey="우럭" fill="#F6DB96" />
+        </BarChart>
+      </div>
+    </div>
+  );
+};
 
-export default NaverMapComponent;
+export default MapWithCircle;
