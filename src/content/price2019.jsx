@@ -14,216 +14,102 @@ import {
 const flatdataYear = [
   {
     name: "1월",
-    제주산지가격: 10804,
+    제주산지가격: 8225,
   },
   {
     name: "2월",
-    제주산지가격: 10337,
+    제주산지가격: 8582,
   },
   {
     name: "3월",
-    제주산지가격: 11041,
+    제주산지가격: 8908,
   },
   {
     name: "4월",
-    제주산지가격: 12391,
+    제주산지가격: 9667,
   },
   {
     name: "5월",
-    제주산지가격: 12477,
+    제주산지가격: 8446,
   },
   {
     name: "6월",
-    제주산지가격: 12187,
+    제주산지가격: 8066,
   },
   {
     name: "7월",
-    제주산지가격: 12741,
+    제주산지가격: 8685,
   },
   {
     name: "8월",
-    제주산지가격: 12646,
+    제주산지가격: 9112,
   },
   {
     name: "9월",
-    제주산지가격: 12531,
+    제주산지가격: 8556,
   },
   {
     name: "10월",
-    제주산지가격: 11436,
+    제주산지가격: 7963,
   },
   {
     name: "11월",
-    제주산지가격: 10301,
+    제주산지가격: 7721,
   },
   {
     name: "12월",
-    제주산지가격: 11257,
+    제주산지가격: 7532,
   },
 ];
 
 const rockdataYear = [
   {
     name: "1월",
-    통영산지가격: 8985,
+    통영산지가격: 8392,
   },
   {
     name: "2월",
-    통영산지가격: 7777,
+    통영산지가격: 7001,
   },
   {
     name: "3월",
-    통영산지가격: 7236,
+    통영산지가격: 6123,
   },
   {
     name: "4월",
-    통영산지가격: 8080,
+    통영산지가격: 5754,
   },
   {
     name: "5월",
-    통영산지가격: 7802,
+    통영산지가격: 6007,
   },
   {
     name: "6월",
-    통영산지가격: 7307,
+    통영산지가격: 6034,
   },
   {
     name: "7월",
-    통영산지가격: 7892,
+    통영산지가격: 6054,
   },
   {
     name: "8월",
-    통영산지가격: 8687,
+    통영산지가격: 8067,
   },
   {
     name: "9월",
-    통영산지가격: 9262,
+    통영산지가격: 8884,
   },
   {
     name: "10월",
-    통영산지가격: 9885,
+    통영산지가격: 8771,
   },
   {
     name: "11월",
-    통영산지가격: 8634,
+    통영산지가격: 7520,
   },
   {
     name: "12월",
-    통영산지가격: 8070,
-  },
-];
-
-const data2024 = [
-  {
-    name: "1월",
-    예측값: 10177,
-  },
-  {
-    name: "2월",
-    예측값: 12177,
-  },
-  {
-    name: "3월",
-    예측값: 11577,
-  },
-  {
-    name: "4월",
-    예측값: 10177,
-  },
-  {
-    name: "5월",
-    예측값: 9608,
-  },
-  {
-    name: "6월",
-    예측값: 11577,
-  },
-  {
-    name: "7월",
-    예측값: 13579,
-  },
-  {
-    name: "8월",
-    예측값: 12086,
-  },
-  {
-    name: "9월",
-    예측값: 11577,
-  },
-  {
-    name: "10월",
-    예측값: 10068,
-  },
-  {
-    name: "11월",
-    예측값: 11577,
-  },
-  {
-    name: "12월",
-    예측값: 12577,
-  },
-];
-
-const rockdata2024 = [
-  {
-    name: "1월",
-    실제값: 16053,
-    예측값: 12744,
-  },
-  {
-    name: "2월",
-    실제값: 12716,
-    예측값: 12576,
-  },
-  {
-    name: "3월",
-    실제값: 10880,
-    예측값: 10320,
-  },
-  {
-    name: "4월",
-    실제값: 9067,
-    예측값: 9905,
-  },
-  {
-    name: "5월",
-    실제값: 7471,
-    예측값: 8489,
-  },
-  {
-    name: "6월",
-    실제값: 8318,
-    예측값: 7260,
-  },
-  {
-    name: "7월",
-    실제값: 10903,
-    예측값: 8804,
-  },
-  {
-    name: "8월",
-    실제값: 9144,
-    예측값: 11042,
-  },
-  {
-    name: "9월",
-    실제값: 13199,
-    예측값: 8307,
-  },
-  {
-    name: "10월",
-    실제값: 13493,
-    예측값: 12649,
-  },
-  {
-    name: "11월",
-    실제값: 12396,
-    예측값: 11569,
-  },
-  {
-    name: "12월",
-    실제값: 11059,
-    예측값: 10892,
+    통영산지가격: 6577,
   },
 ];
 
@@ -232,10 +118,10 @@ export default class mainChart2018Rechart extends PureComponent {
     return (
       <div>
         <div className="flatchart2022">
-          <div className="title">2019 광어 산지가격</div>
+          <div className="title">2019 광어 월별 산지가격</div>
           <LineChart
             width={730}
-            height={350}
+            height={280}
             data={flatdataYear}
             margin={{
               top: 5,
@@ -248,8 +134,8 @@ export default class mainChart2018Rechart extends PureComponent {
             <CartesianGrid strokeDasharray="3 3" />
             <XAxis dataKey="name" padding={{ left: 50, right: 50 }} />
             <YAxis
-              domain={[5000, 15000]}
-              ticks={[5000, 10000, 15000]}
+              domain={[0, 5000, 15000]}
+              ticks={[7500, 15000]}
               tickCount={4}
             />
             <Tooltip />
@@ -257,17 +143,17 @@ export default class mainChart2018Rechart extends PureComponent {
             <Line
               type="monotone"
               dataKey="제주산지가격"
-              stroke="#8884d8"
+              stroke="#4E79A7"
               activeDot={{ r: 8 }}
               strokeWidth={2}
             />
           </LineChart>
         </div>
         <div className="rockchart2022">
-          <div className="title">2019 우럭 산지가격</div>
+          <div className="title">2019 우럭 월별 산지가격</div>
           <LineChart
             width={730}
-            height={350}
+            height={280}
             data={rockdataYear}
             margin={{
               top: 5,
@@ -280,8 +166,8 @@ export default class mainChart2018Rechart extends PureComponent {
             <CartesianGrid strokeDasharray="3 3" />
             <XAxis dataKey="name" padding={{ left: 50, right: 50 }} />
             <YAxis
-              domain={[5000, 15000]}
-              ticks={[5000, 10000, 15000]}
+              domain={[0, 5000, 15000]}
+              ticks={[7500, 15000]}
               tickCount={4}
             />
             <Tooltip />
@@ -289,7 +175,7 @@ export default class mainChart2018Rechart extends PureComponent {
             <Line
               type="monotone"
               dataKey="통영산지가격"
-              stroke="#8884d8"
+              stroke="#EDC948"
               activeDot={{ r: 8 }}
               strokeWidth={2}
             />
@@ -297,7 +183,7 @@ export default class mainChart2018Rechart extends PureComponent {
         </div>
         <div className="rockchart2022">
           <iframe
-            src="https://public.tableau.com/views/_16979658089990/1_1?:language=ko-KR&:display_count=n&:origin=viz_share_link?:showVizHome=no?:embed=true"
+            src="https://public.tableau.com/views/2019_16979686604480/2019_2?:language=ko-KR&:display_count=n&:origin=viz_share_link?:showVizHome=no?:embed=true"
             width="1500"
             height="600"
             title="광어"

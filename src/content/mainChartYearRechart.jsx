@@ -265,7 +265,7 @@ export default class mainChartYearRechart extends PureComponent {
             <Line
               type="monotone"
               dataKey="제주산지가격"
-              stroke="#8884d8"
+              stroke="#4E79A7"
               activeDot={{ r: 8 }}
               strokeWidth={2}
             />
@@ -297,7 +297,7 @@ export default class mainChartYearRechart extends PureComponent {
             <Line
               type="monotone"
               dataKey="통영산지가격"
-              stroke="#8884d8"
+              stroke="#EDC948"
               activeDot={{ r: 8 }}
               strokeWidth={2}
             />
