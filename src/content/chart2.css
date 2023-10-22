@@ -22,6 +22,12 @@ h2{
   clear: both;
   text-align: center;
 }
+.yearButton{
+  float: right;
+}
+.yearBtn{
+  margin-right: 120px;
+}
 
 .flatchart2022{
   float: left;

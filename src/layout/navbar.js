@@ -20,6 +20,9 @@ function navbar() {
           </div>
         </a>
         <h3 className="menulist pt-5">
+          <a href={`/Page1`}>산지가격</a>
+        </h3>
+        <h3 className="menulist pt-5">
           <a href={`/Page2`}>출하량</a>
         </h3>
         <h3 className="menulist pt-5">

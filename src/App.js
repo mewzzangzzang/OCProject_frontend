@@ -9,6 +9,7 @@ import Main from "./content/main";
 import Chart2 from "./content/chart2";
 import Chart3 from "./content/chart3";
 import Navbar from "./layout/navbar";
+import Page1 from "./content/page1";
 import Page2 from "./content/page2";
 import Page3 from "./content/page3";
 import Page4 from "./content/page4";
@@ -30,6 +31,8 @@ function App() {
           <Route path="/chart" element={<Chart />} />
           <Route path="/chart2" element={<Chart2 />} />
           <Route path="/chart3" element={<Chart3 />} />
+          <Route path="/chart3" element={<Chart3 />} />
+          <Route path="/page1" element={<Page1 />} />
           <Route path="/page2" element={<Page2 />} />
           <Route path="/page3" element={<Page3 />} />
           <Route path="/page4" element={<Page4 />} />

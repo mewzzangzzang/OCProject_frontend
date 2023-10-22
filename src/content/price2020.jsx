@@ -11,129 +11,105 @@ import {
   Legend,
 } from "recharts";
 
-const flatdata2022 = [
+const flatdataYear = [
   {
     name: "1월",
-    실제값: 13471,
-    예측값: 12417,
+    제주산지가격: 10804,
   },
   {
     name: "2월",
-    실제값: 13248,
-    예측값: 12210,
+    제주산지가격: 10337,
   },
   {
     name: "3월",
-    실제값: 12847,
-    예측값: 11796,
+    제주산지가격: 11041,
   },
   {
     name: "4월",
-    실제값: 12988,
-    예측값: 11648,
+    제주산지가격: 12391,
   },
   {
     name: "5월",
-    실제값: 13666,
-    예측값: 12370,
+    제주산지가격: 12477,
   },
   {
     name: "6월",
-    실제값: 13832,
-    예측값: 12537,
+    제주산지가격: 12187,
   },
   {
     name: "7월",
-    실제값: 13806,
-    예측값: 12618,
+    제주산지가격: 12741,
   },
   {
     name: "8월",
-    실제값: 13706,
-    예측값: 12508,
+    제주산지가격: 12646,
   },
   {
     name: "9월",
-    실제값: 13598,
-    예측값: 12814,
+    제주산지가격: 12531,
   },
   {
     name: "10월",
-    실제값: 14470,
-    예측값: 12816,
+    제주산지가격: 11436,
   },
   {
     name: "11월",
-    실제값: 11528,
-    예측값: 13477,
+    제주산지가격: 10301,
   },
   {
     name: "12월",
-    실제값: 14166,
-    예측값: 10549,
+    제주산지가격: 11257,
   },
 ];
 
-const rockdata2022 = [
+const rockdataYear = [
   {
     name: "1월",
-    실제값: 16053,
-    예측값: 12744,
+    통영산지가격: 8985,
   },
   {
     name: "2월",
-    실제값: 12716,
-    예측값: 12576,
+    통영산지가격: 7777,
   },
   {
     name: "3월",
-    실제값: 10880,
-    예측값: 10320,
+    통영산지가격: 7236,
   },
   {
     name: "4월",
-    실제값: 9067,
-    예측값: 9905,
+    통영산지가격: 8080,
   },
   {
     name: "5월",
-    실제값: 7471,
-    예측값: 8489,
+    통영산지가격: 7802,
   },
   {
     name: "6월",
-    실제값: 8318,
-    예측값: 7260,
+    통영산지가격: 7307,
   },
   {
     name: "7월",
-    실제값: 10903,
-    예측값: 8804,
+    통영산지가격: 7892,
   },
   {
     name: "8월",
-    실제값: 9144,
-    예측값: 11042,
+    통영산지가격: 8687,
   },
   {
     name: "9월",
-    실제값: 13199,
-    예측값: 8307,
+    통영산지가격: 9262,
   },
   {
     name: "10월",
-    실제값: 13493,
-    예측값: 12649,
+    통영산지가격: 9885,
   },
   {
     name: "11월",
-    실제값: 12396,
-    예측값: 11569,
+    통영산지가격: 8634,
   },
   {
     name: "12월",
-    실제값: 11059,
-    예측값: 10892,
+    통영산지가격: 8070,
   },
 ];
 
@@ -251,16 +227,16 @@ const rockdata2024 = [
   },
 ];
 
-export default class prediction22 extends PureComponent {
+export default class mainChart2018Rechart extends PureComponent {
   render() {
     return (
       <div>
         <div className="flatchart2022">
-          <div className="title">2022 광어 산지가격 예측</div>
+          <div className="title">2020 광어 산지가격</div>
           <LineChart
             width={730}
             height={350}
-            data={flatdata2022}
+            data={flatdataYear}
             margin={{
               top: 5,
               right: 30,
@@ -272,71 +248,27 @@ export default class prediction22 extends PureComponent {
             <CartesianGrid strokeDasharray="3 3" />
             <XAxis dataKey="name" padding={{ left: 50, right: 50 }} />
             <YAxis
-              domain={[10000, 15000]}
-              ticks={[10000, 12500, 15000]}
+              domain={[5000, 15000]}
+              ticks={[5000, 10000, 15000]}
               tickCount={4}
             />
             <Tooltip />
             <Legend />
             <Line
               type="monotone"
-              dataKey="실제값"
+              dataKey="제주산지가격"
               stroke="#8884d8"
               activeDot={{ r: 8 }}
-              strokeWidth={2}
-            />
-            <Line
-              type="monotone"
-              dataKey="예측값"
-              stroke="#82ca9d"
               strokeWidth={2}
             />
           </LineChart>
         </div>
         <div className="rockchart2022">
-          <div className="title">2022 우럭 산지가격 예측</div>
+          <div className="title">2020 우럭 산지가격</div>
           <LineChart
             width={730}
             height={350}
-            data={rockdata2022}
-            margin={{
-              top: 5,
-              right: 30,
-              left: 20,
-              bottom: 5,
-            }}
-          >
-            <title text="차트 제목" />
-            <CartesianGrid strokeDasharray="3 3" />
-            <XAxis dataKey="name" padding={{ left: 50, right: 50 }} />
-            <YAxis
-              domain={[5000, 20000]}
-              ticks={[5000, 10000, 15000, 20000]}
-              tickCount={4}
-            />
-            <Tooltip />
-            <Legend />
-            <Line
-              type="monotone"
-              dataKey="실제값"
-              stroke="#8884d8"
-              activeDot={{ r: 8 }}
-              strokeWidth={2}
-            />
-            <Line
-              type="monotone"
-              dataKey="예측값"
-              stroke="#82ca9d"
-              strokeWidth={2}
-            />
-          </LineChart>
-        </div>
-        <div className="flatchart2024">
-          <div className="title">2024 광어 예측가격</div>
-          <LineChart
-            width={730}
-            height={350}
-            data={data2024}
+            data={rockdataYear}
             margin={{
               top: 5,
               right: 30,
@@ -356,49 +288,20 @@ export default class prediction22 extends PureComponent {
             <Legend />
             <Line
               type="monotone"
-              dataKey="실제값"
+              dataKey="통영산지가격"
               stroke="#8884d8"
               activeDot={{ r: 8 }}
               strokeWidth={2}
             />
-            <Line
-              type="monotone"
-              dataKey="예측값"
-              stroke="#e9c46a"
-              strokeWidth={2}
-            />
           </LineChart>
         </div>
-        <div className="rockchart2024">
-          <div className="title">2024 우럭 예측가격</div>
-          <LineChart
-            width={730}
-            height={350}
-            data={rockdata2024}
-            margin={{
-              top: 5,
-              right: 30,
-              left: 20,
-              bottom: 5,
-            }}
-          >
-            <title text="차트 제목" />
-            <CartesianGrid strokeDasharray="3 3" />
-            <XAxis dataKey="name" padding={{ left: 50, right: 50 }} />
-            <YAxis
-              domain={[5000, 15000]}
-              ticks={[5000, 10000, 15000]}
-              tickCount={4}
-            />
-            <Tooltip />
-            <Legend />
-            <Line
-              type="monotone"
-              dataKey="예측값"
-              stroke="#2a9d8f"
-              strokeWidth={2}
-            />
-          </LineChart>
+        <div className="rockchart2022">
+          <iframe
+            src="https://public.tableau.com/views/_16979658089990/1_1?:language=ko-KR&:display_count=n&:origin=viz_share_link?:showVizHome=no?:embed=true"
+            width="1500"
+            height="600"
+            title="광어"
+          />
         </div>
       </div>
     );
