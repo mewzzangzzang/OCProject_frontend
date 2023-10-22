@@ -15,6 +15,7 @@ import Page3 from "./content/page3";
 import Page4 from "./content/page4";
 import Page5 from "./content/page5";
 import List from "./content/list";
+import DownLoad from "./content/filedownload";
 
 import Login from "./content/login";
 import Register from "./content/register";
@@ -38,6 +39,7 @@ function App() {
           <Route path="/page4" element={<Page4 />} />
           <Route path="/page5" element={<Page5 />} />
           <Route path="/list" element={<List />} />
+          <Route path="/downLoad" element={<DownLoad />} />
         </Routes>
       </BrowserRouter>
     </div>
