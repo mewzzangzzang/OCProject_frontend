@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
-import Googlegeo from "./googlegeo";
-import Googletime from "./googletime";
+// import Googlegeo from "./googlegeo";
+// import Googletime from "./googletime";
 import Navermap from "./navermap";
 import { googleData } from "./fishData";
 // 수출 페이지
@@ -15,8 +15,8 @@ const Page5 = () => {
 
   // 트렌드 페이지
   const selectComponent = {
-    Geo: <Googlegeo />,
-    Time: <Googletime />,
+    // Geo: <Googlegeo />,
+    // Time: <Googletime />,
     Map: <Navermap />,
   };
 
