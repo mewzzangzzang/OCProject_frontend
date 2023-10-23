@@ -1,6 +1,6 @@
 .navbar {
   width: 25vh;
-  height: 90vh;
+  height: 103vh;
   border-radius: 30px;
   background: #7f7fd5; /* fallback for old browsers */
   background: -webkit-linear-gradient(
@@ -13,11 +13,19 @@
     #e2d4f7,
     #86a8e7
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  float: left;
+  /* float: left; */
 }
 
 .search {
   width: 40vh;
   height: 5vh;
   border-radius: 80px;
+}
+a {
+  text-decoration: none;
+  
+}
+
+a:hover {
+  color: #d8dee6;
 }

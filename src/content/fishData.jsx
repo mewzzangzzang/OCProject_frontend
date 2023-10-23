@@ -21,4 +21,6 @@ export const rechartYear = [
   { id: 4, text: "2020년", name: "Y2020" },
   { id: 5, text: "2021년", name: "Y2021" },
   { id: 6, text: "2022년", name: "Y2022" },
+  { id: 7, text: "test", name: "Y2022test" },
+  
 ];

@@ -1,7 +1,6 @@
 // 산지가격 페이지
 
 // 2022 실제값, 예측 차트
-import { render } from "@testing-library/react";
 import React, { useState } from "react";
 import "./chart2.css";
 import { rechartYear } from "./fishData";
@@ -11,6 +10,7 @@ import Price2019 from "./price2019";
 import Price2020 from "./price2020";
 import Price2021 from "./price2021";
 import Price2022 from "./price2022";
+import Price2022test from "./datatest";
 
 const Price = () => {
   const [content, setContent] = useState("Year");
@@ -27,7 +27,10 @@ const Price = () => {
     Y2020: <Price2020 />,
     Y2021: <Price2021 />,
     Y2022: <Price2022 />,
+    Y2022test: <Price2022test />,
   };
+
+  const filePath = process.env.PUBLIC_URL + "/yearData.xlsx";
 
   return (
     <div className="all mt-4">
@@ -37,17 +40,21 @@ const Price = () => {
           {data.text}
         </button>
       ))}{" "}
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="32"
-        height="32"
-        fill="currentColor"
-        className="bi bi-file-earmark-arrow-down  "
-        viewBox="0 0 16 16"
-      >
-        <path d="M8.5 6.5a.5.5 0 0 0-1 0v3.793L6.354 9.146a.5.5 0 1 0-.708.708l2 2a.5.5 0 0 0 .708 0l2-2a.5.5 0 0 0-.708-.708L8.5 10.293V6.5z" />
-        <path d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2zM9.5 3A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5v2z" />
-      </svg>
+      <div className="down">
+        <a href={filePath} download="./yearData.xlsx">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="32"
+            height="32"
+            fill="currentColor"
+            className="bi bi-file-earmark-arrow-down"
+            viewBox="0 0 16 16"
+          >
+            <path d="M8.5 6.5a.5.5 0 0 0-1 0v3.793L6.354 9.146a.5.5 0 1 0-.708.708l2 2a.5.5 0 0 0 .708 0l2-2a.5.5 0 0 0-.708-.708L8.5 10.293V6.5z" />
+            <path d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2zM9.5 3A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5v2z" />
+          </svg>
+        </a>
+      </div>
       <h1>ㅤ</h1>
       {selectComponent[content]}
     </div>

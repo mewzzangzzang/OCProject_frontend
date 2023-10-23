@@ -1,11 +1,11 @@
 import React from "react";
 
 const FileDownloadComponent = () => {
-  const filePath = process.env.PUBLIC_URL + "/yearData.xlsx";
+  const filePath = process.env.PUBLIC_URL + "/2023_2024_flatPred.xlsx";
 
   return (
     <div>
-      <a href={filePath} download="./yearData.xlsx">
+      <a href={filePath} download="./2023_2024_flatPred.xlsx">
         Download Excel
       </a>
     </div>
