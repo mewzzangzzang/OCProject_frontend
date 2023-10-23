@@ -1,5 +1,5 @@
 import { render } from "@testing-library/react";
-import React, { PureComponent, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "./chart2.css";
 import {
